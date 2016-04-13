@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url> 
+    <loc>http://jbpccwinter.com/final_project/index.html</loc> 
+    <image:image>
+       <image:loc>http://jbpccwinter.com/final_project/images/family_food_cart.jpg</image:loc>
+       <image:caption>The family of anything's PASTAble food cart</image:caption>
+    </image:image>
+  </url>
+</urlset>
+	<url> 
+    <loc>http://jbpccwinter.com/final_project/menu.html</loc> 
+    <image:image>
+       <image:loc>http://jbpccwinter.com/final_project/images/northwest_primavera.jpg</image:loc>
+       <image:caption>Northwest Primavera</image:caption>
+    </image:image>
+    <image:image>
+       <image:loc></image:loc>
+       <image:caption></image:caption>
+    </image:image>
+    <image:image>
+       <image:loc></image:loc>
+       <image:caption></image:caption>
+    </image:image>
+    <image:image>
+       <image:loc></image:loc>
+       <image:caption></image:caption>
+    </image:image>
+    <image:image>
+       <image:loc></image:loc>
+       <image:caption></image:caption>
+    </image:image>
+    <image:image>
+       <image:loc></image:loc>
+       <image:caption></image:caption>
+    </image:image>
+    <image:image>
+       <image:loc></image:loc>
+       <image:caption></image:caption>
+    </image:image>
+  </url>
+  <url> 
+    <loc>http://jbpccwinter.com/final_project/contact.html</loc> 
+    <image:image>
+       <image:loc>http://jbpccwinter.com/final_project/images/impasta.png</image:loc>
+       <image:caption>Impasta joke</image:caption>
+    </image:image>
+  </url>
+  <url> 
+    <loc>http://jbpccwinter.com/final_project/buzz.html</loc> 
+    <image:image>
+       <image:loc>http://jbpccwinter.com/final_project/images/antipasto.png</image:loc>
+       <image:caption>Antipasto joke</image:caption>
+    </image:image>
+  </url>
+  <url> 
+    <loc>http://jbpccwinter.com/final_project/videos.html</loc> 
+  </url>
+  <url> 
+    <loc>http://jbpccwinter.com/final_project/gallery.html</loc> 
+    
+  </url>

@@ -1,0 +1,50 @@
+
+                            
+/* TEAM */
+
+                            
+Designer & Developer: Josh Boyan
+
+                            
+Site: 
+
+                            
+Twitter: 
+
+                            
+Location: Portland, OR.
+
+                         
+                 
+                        [...]
+						
+
+							
+/* THANKS */
+
+							
+Ed and Lauri Lybrand
+
+						
+                 
+                        [...]
+                        
+
+                            
+/* SITE */
+
+                            
+Last update: 2016/03/16 
+
+                            
+Standards: HTML5, CSS3, Schema.org, W3C
+
+                            
+Components: LESS, jQuery, Open Status Plugin, BlueImp Plugin, Cycle2 Plugin, Unveil Plugin
+
+                            
+Software: SublimeText 2, GIMP, Inkscape
+
+This is a site that I built from concept to completion.
+
+The clients, Ed and Laury, wanted a site for their food cart that matched the tone for their business; warm, inviting and rustic. After interviewing the clients I drew wire frames and decided information architecture using wireframe.io. The site is a mobile-first responsive design built using LESS for styling and Jquery for added functionality. In addition to designing and developing the site I wrote all of the copy.

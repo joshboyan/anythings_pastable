@@ -1,0 +1,1051 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+/* 
+<link href="styles/style.less" rel="stylesheet/less">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.3.1/less.min.js">
+</script>
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/********************* SECTIONS *********************/
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+/********************* COLUMN SETUP *********************/
+.col {
+    display: block;
+    float: left;
+    /*Need to recalculate all widths with 1% margin instead of 1.6%*/
+    margin: 1% 0 1% 1%;
+}
+.col:first-child { margin-left: 0; }
+
+/********************* GROUPING  *********************/
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/********************* GRID OF TWELVE *********************/
+.span12 {
+    width: 100%;
+}
+
+.span11 {
+    width: 91.53%;
+}
+.span10 {
+    width: 83.06%;
+}
+
+.span9 {
+    width: 74.6%;
+}
+
+.span8 {
+    width: 66.13%;
+}
+
+.span7 {
+    width: 57.66%;
+}
+
+.span6 {
+    width: 49%;
+}
+
+.span5 {
+    width: 40.73%;
+}
+
+.span4 {
+    width: 32.26%;
+}
+
+.span3 {
+    width: 23.8%;
+}
+
+.span2 {
+    width: 15.33%;
+}
+
+.span1 {
+    width: 6.866%;
+}
+
+/*********************  GO FULL WIDTH BELOW 768 PIXELS *********************/
+@media only screen and (max-width: 768px) {
+    .col {  margin: 1% 0; }
+    
+    .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+}
+
+/*
+The jigsaw validator did not like the text-rendering(line 56) or the font
+smoothing (line 57,58). MDN says not to implement font-smoothing because it is
+not on a stanards track with W3C
+*/
+
+/* GENERIC STYLESHEET */
+ 
+/*
+
+BOX-SIZING CHANGE (box-sizing property)
+
+The following CSS changes the default box-sizing of box elements from
+content-box to border-box.
+
+border-box automatically includes border *and* padding sizes into your
+box property widths. No more subtracting padding and border sizes from
+your box widths! Now you can use responsive grids without fear of 
+making your columns too wide and causing that annoying left-right
+scroll bar at the bottom of the page.
+
+Remember: this does not take margins into account since margins are 
+not technically part of the box. For those, you will still have to 
+do some subtraction. 
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+ 
+/*
+
+TEXT RENDERING (text-rendering property)
+
+Some fonts are built to handle certain combinations of lettering through
+the use of something called ligatures. For instance, the letters "fi" in
+a serif font can look odd if the top curve of the f runs into the dot of
+the i next to it. A ligature styles them both beautifully. Your browser
+generally does this for you but not on font sizes smaller than 20pt. This
+text-rendering code changes that. This one is entirely optional and you
+can remove this first line if you're not comfortable with it.
+
+
+FONT SMOOTHING (font-smoothing property)
+
+At this point in time, the font smoothing your browser does by default
+is imperfect and makes the font too thick. Using font-smoothing in CSS is
+subtle on a standard display but impressive in a high-definition display.
+There are two additional declarations to cover usage in Webkit and 
+Mozilla engine browsers.
+
+*/
+
+html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+
+USE IMAGES, EMBEDS AND OBJECTS FREELY WITHOUT WORRYING ABOUT SIZES AND
+BREAKING YOUR LAYOUTS (max-width property)
+
+The following ensures that images and embedded content you add can't be 
+wider than the box element they are currently in. This is important for 
+responsive design, as this allows you to use images without having to 
+specify width and height attributes in the HTML.
+
+*/
+
+img, embed, object {
+    max-width: 100%;
+}
+
+/*
+
+DEFAULT BEHAVIOR OF SELECTED HYPERLINKS (outline property)
+
+No more ugly dotted outlines on your active links. This is not very 
+noticeable until it's pointed out, but it makes for a cleaner user
+experience.
+
+*/
+
+a {
+    outline: none;
+}
+
+/*
+
+IDENTIFYING HYPERLINK URLs FOR NON-INTERACTIVE DEVICE MEDIA (FOR PRINT,
+content property)
+
+Printed versions of the web page will now add the URL right after the
+hyperlink, since you can't follow hyperlinks on printed pages. At least,
+not yet! The content property allows this.
+
+*/
+
+ @media print {
+    a:after {
+        content: " [' attr(href) '] ";
+    }
+}
+@font1: Georgia, Times, 'Times New Roman', serif;
+@font2: 'Roboto', sans-serif;
+@shadow: 1px 1px #111;
+@normsize: 1em;
+@primary: #F1F5F7;
+@primary2: #000;
+@accent:#265749;
+@accent2: #BDCFDB;
+@accent3: #AB0728;
+@border1: 1px solid @accent2;
+@radius: 4px;
+@margin: 35px auto 0 auto;
+@margin2: 55px auto 0 auto;
+
+
+/* MOBILE STYLESHEET */
+
+body {
+    font: 16px/1.5 @font2;
+    background: @primary;
+}
+
+a {
+    text-decoration: none;
+    color: @accent;
+    text-shadow: @shadow;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+a:hover {
+    color: @accent2;
+}
+
+p, h1, h2, h3 {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: @font1;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.375em;
+    font-style: italic; 
+    margin-top: 115px;
+}
+
+h1 span {
+    color: @accent3;
+}
+
+h2 {
+    font-size: 2.25em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    font: 1em;
+/*check to see if this is the proper way to implement this after compiling*/
+    widows: 3;
+}
+
+p a {
+  position: relative;
+  margin:-.5em;
+  padding: .5em;
+  z-index: 90;
+}
+
+ul {
+    list-style-position: outside;
+}
+
+em {
+    font-style: italic;
+}
+
+pre {
+    font-family: "Courier New", monospace;
+    white-space: pre-wrap;
+}
+
+header {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../images/wood.png) repeat;
+    z-index: 99;
+}
+
+nav ul {
+    top: 90px;
+    position: fixed;
+    display: block;
+    text-align: center;
+    -webkit-transition: all 1s ease-in-out 0s;
+    transition: all 1s ease-in-out 0s;
+    z-index: 50;    
+}
+
+nav li {
+    line-height: 2;
+    margin-left: 60%;
+    border: @border1;
+    width: 40%;
+    height: 45px;
+    background: @accent;
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, @accent), color-stop(80%, @accent), color-stop(100%, @accent2));
+    background: -webkit-radial-gradient(center, ellipse cover, @accent 0%, @accent 80%, @accent2 100%);
+    background: -webkit-radial-gradient(center ellipse, @accent 0%, @accent 80%, @accent2 100%);
+    background: radial-gradient(ellipse at center, @accent 0%, @accent 80%, @accent2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@accent', endColorstr='@accent2', GradientType=1 );
+    border-radius: @radius;
+    z-index: 50;
+}
+
+nav a {
+    display: block;   
+    color: @primary;
+    text-shadow: @shadow; 
+    padding-top: 5px; 
+    z-index: 50;  
+}
+
+nav a:active {
+    color: @accent;
+    background: @primary;
+    z-index: 50;
+}
+
+li {
+    font: 1em;
+}
+
+form {
+    margin: -60px 0 0 5%;
+    z-index: 50;
+}
+
+video {
+    width: 70%;
+    margin: 35px 15% 0 15%;
+}
+footer {
+    background: url(../images/wood.png) repeat;
+}
+
+footer a {
+    color: @accent2;
+}
+
+footer a:hover {
+    color: @accent;
+}
+
+#logo {
+    width: 170px;
+}
+
+#menu {
+    position: absolute;
+    right: 10%; 
+    top: 25%;
+    width: 45px;
+    border: @border1;
+    border-radius: @radius;
+    background: @accent;
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, @accent), color-stop(80%, @accent), color-stop(100%, @accent2));
+    background: -webkit-radial-gradient(center, ellipse cover, @accent 0%, @accent 80%, @accent2 100%);
+    background: -webkit-radial-gradient(center ellipse, @accent 0%, @accent 80%, @accent2 100%);
+    background: radial-gradient(ellipse at center, @accent 0%, @accent 80%, @accent2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@accent', endColorstr='@accent2', GradientType=1 );
+    -webkit-transition: all 2s ease-in-out 0;
+    transition: all 2s ease-in-out 0;
+    -webkit-transition: all .5s ease-in-out 0s;
+    transition: all .5s ease-in-out 0s;
+}
+
+#topSocial {
+    position: absolute;
+    right: 10%;
+    top: 0;
+    display: none;
+}
+.frame {
+    display: block;
+    margin: 0 5%;
+    width: 90%;
+    max-width: 370px;
+    text-align: center;
+    padding: 10px;
+    background: #fff;
+    border: @border1;
+    box-shadow: 5px 5px 10px #000;
+    -webkit-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+            transform: rotate(2deg);
+    z-index: 1;
+    font: bold 1.5em/1.5 'Gochi Hand', cursive;
+}
+
+.jsOff {
+  display: none;
+}
+.menuFrame {
+    margin: -80px auto 0 auto;
+    width: 80%;
+    max-width: 370px;
+    text-align: center;
+    padding:10px;
+    background: #fff;
+    border: @border1;
+    box-shadow: 5px 5px 10px #000;
+    -webkit-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+            transform: rotate(2deg);
+    z-index: 1;
+    font: bold 1.5em/1.5 'Gochi Hand', cursive;
+}
+
+.menuFrameR {
+    margin: 40px auto 0px auto;
+  width: 80%;
+  height: auto;
+  max-width: 370px;
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+  border: @border1;
+  box-shadow: 5px 5px 10px #000;
+  -webkit-transform: rotate(358deg);
+  -ms-transform: rotate(358deg);
+  transform: rotate(358deg);
+  z-index: 1;
+  font: bold 1.5em/1.5 'Gochi Hand', cursive;
+    
+}
+
+.pull {
+  margin-top:-70px;
+}
+
+.frame img {
+    
+}
+
+.menuFrame img {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  backround: #000;
+} 
+
+.menuFrameR img {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  backround: #000;
+  margin-top: -70px;
+}
+
+.menuDesc {
+    margin-top: 25px;
+}
+
+.menuDesc p {
+    padding-top: 15px;
+    width: 90%;    
+}
+
+.menuDesc h3 {
+    display: none;
+}
+.push {
+     margin: 20px auto 80px auto;
+}
+.cycle-slideshow {
+    z-index: 1;
+}
+
+#foodDescription {
+    margin-top: 20px;
+}
+#openHours {
+    margin: 35px auto 0 auto;
+}
+
+#openHours p {
+    margin-top: 25px;
+}
+
+#filler {
+    display: none;
+    width: 300px;
+}
+#filler2 {
+    display: none;
+}
+.yelpwidget {
+    margin: 25px auto 0 auto;
+    background: #fff;
+    padding: 10px 0 0 10px;
+    margin-top: 10px;
+    border: @border1;
+}
+
+.yelpwidget a {
+    font-size: 1em;
+    line-height: 1;
+    font-weight: normal;
+}
+
+
+.twitter {
+    border: @border1;
+}
+
+.fb-page {
+    border: @border1;
+}
+
+#links {
+    text-align: center;
+    margin: -60px 5% 0 auto;
+
+}
+
+.triangle {
+    margin: 35px 0 0 0;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-left: 250px solid @accent3;
+    border-bottom: 100px solid transparent;
+    overflow: hidden;
+ }   
+
+.triangleR {
+    margin-top: -50px;
+    float: right;
+    width: 0;
+    height: 0;
+    border-top: 0px solid transparent;
+    border-right:250px solid @accent;
+    border-bottom: 100px solid transparent;
+    overflow: hidden;
+}
+
+.triangleF {
+    margin-top: -80px;
+    float: right;
+    width: 0;
+    height: 0;
+    border-top: 100px solid transparent;
+    border-right:250px solid @accent;
+    border-bottom: 0px solid transparent;
+    overflow: hidden;
+    z-index: 1;
+}
+#tagline {
+    margin: @margin;
+}
+#movie {
+    margin-top: -75px;
+    max-height: 410px;
+}
+#cycle-1 .cycle-slide-active {
+    border: 5px solid #fff;
+}
+
+#cycle-1 {
+    
+}
+#map {
+    margin: @margin;
+    padding:10px;
+    background: #fff;
+    border: @border1;
+    width: 80%;
+    max-width: 400px;
+}
+table {
+  margin: 35px 10% 0 10%;
+  width: 80%;
+}
+td {
+  border-bottom: @border1;
+  font-size: 1em;
+  line-height: 2; 
+}
+
+tr:first-child {
+  border-top: @border1;
+}
+#about {
+    width:80%;
+    margin: 35px 10% 0 10%;
+}
+
+#about p {
+    margin-top: 15px;
+}
+#callIt {
+    margin: @margin;
+}
+
+#getIt {
+    margin: @margin;
+}
+
+#dd {
+    width: 60%;
+    max-width: 300px;
+}
+
+#address {
+    margin: @margin;
+    font-weight: bold;
+}
+
+#address a {
+    text-align: center;
+    position: relative;
+    z-index: 90;
+}
+
+#phone {
+    margin: @margin;
+}
+
+#phone a {
+    position: relative;
+    z-index: 90;
+}
+
+#emailUs {
+    margin: @margin;
+}
+
+#emailUs a {
+    position: relative;
+    z-index: 90;
+}
+.social {
+    margin: @margin;
+}
+
+.social li {
+    display: inline;
+    text-align: center;
+    margin: @margin;
+    position: relative;
+    z-index: 99;
+}
+.socialIcons img{
+    border: @border1;
+    border-radius: @radius;
+    background: @accent2; 
+}
+#arrow { 
+    margin: @margin;
+    width: 45px;
+    border: @border1;
+    line-height: 1;
+    border-radius: @radius;
+    background: @accent;
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, @accent), color-stop(80%, @accent), color-stop(100%, @accent2));
+    background: -webkit-radial-gradient(center, ellipse cover, @accent 0%, @accent 80%, @accent2 100%);
+    background: -webkit-radial-gradient(center ellipse, @accent 0%, @accent 80%, @accent2 100%);
+    background: radial-gradient(ellipse at center, @accent 0%, @accent 80%, @accent2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@accent', endColorstr='@accent2', GradientType=1 );
+    position: relative;
+    z-index: 99;
+}
+
+#copy {
+    margin: @margin;
+    font: italic .667em/1 @font1;
+}
+
+.active {
+    color: @accent;
+     background: @accent;
+    background: -webkit-gradient(left top, right top, color-stop(0%, @accent), color-stop(20%, @accent2), color-stop(80%, @accent2), color-stop(100%, @accent));
+    background: -webkit-linear-gradient(left, @accent 0%, @accent2 20%, @accent2 80%, @accent 100%);
+    background: linear-gradient(to right, @accent 0%, @accent2 20%, @accent2 80%, @accent 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@accent', endColorstr='@accent2', GradientType=1 );
+}
+
+.spin {
+    -webkit-transform: rotatez(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotatez(90deg);
+    -webkit-transition: all 2s ease-in-out 0s;
+    transition: all 2s ease-in-out 0s;
+}
+
+.hide {
+    top: -400px;
+    -webkit-transition: all 1s ease-in-out 0s;
+    transition: all 1s ease-in-out 0s;
+    z-index: 1;
+}
+.left {
+    float: left;
+    margin-left: 20%;
+}
+
+.right {
+    float: right;
+    margin-right: 20%;
+}
+
+.center {
+    text-align: center;
+}
+
+.top {
+    margin-top: 20px;
+}
+
+.scripts {
+    width: 90%;
+    margin: 0 auto;
+}
+@-moz-document url-prefix() { 
+   .selector {
+    color:lime;
+   }
+  .pull {
+  margin-top: 0px;
+  }
+  .menuFrameR {
+    margin-top: -30px;
+  }
+  .menuFrameR img {
+  margin-top: 0;
+}
+}
+/* TABLET CSS */
+
+@media only screen and (min-width: 481px) {
+form {
+    margin: -80px 0 0 25%;
+}
+video {
+    width: 40%;
+    margin: 0 30%;
+}
+.frame {
+    text-align: center;
+    margin: 35px 0 0 20%;
+  }
+  .extras h3 {
+  margin-left: -25%;
+  }
+  .extras li {
+  margin-left: 20%;
+  }
+
+.triangle {
+    border-left: 450px solid @accent3;
+    border-bottom: 100px solid transparent;
+}
+
+.triangleR {
+    border-right: 450px solid @accent;
+    border-bottom: 100px solid transparent;
+}
+
+.triangleF {
+    border-right: 450px solid @accent;
+    border-top: 100px solid transparent;
+}
+
+#openHours{
+    width: 45%;
+    padding-left: 5%;
+}
+
+.scripts {
+  width: 80%;
+  margin: 0 auto;
+}
+
+}
+
+/*Desktop CSS */
+
+@media only screen and (min-width: 750px) {
+video {
+    width: 30%;
+    margin: 0 35%;
+}
+
+.frameContainer {
+    margin-left: 0;
+}
+
+#openHours {
+    margin: @margin;
+}
+.menuDesc h3 {
+    display: block;
+}
+.push {
+  margin: 0 auto 80px auto;
+  padding: 35px 0;
+}
+.pushup {
+    padding-bottom: 35px;
+  }  
+}
+@media only screen and (min-width: 769px) {
+    .push {
+  padding: 25px 0;
+  }
+  .pushUp {
+    margin: -160px auto 30px auto;
+  }
+    .frame {
+    margin-left: 0;
+  }
+    #filler2 {
+    display: block;
+    border: @border1;
+    border-top: none;
+}
+}
+@media only screen and (min-width: 780px) {
+body {
+    font: 18px/2 @font2;
+}
+
+header { 
+    height: 130px;
+}
+
+nav ul {
+    background: @accent;
+    position: fixed;
+    display: inline;    
+    top: 90px; 
+    left: 0;
+    width: 100%;
+    min-width: 700px;   
+    -webkit-transition: none;
+    transition: none;     
+}
+
+nav li {
+    display: inline;
+    background: @accent;
+    line-height: 2;
+    margin-left: 0;
+    padding: 0;
+    border: none;
+    height: 25px;
+    width: 100%;   
+}
+
+nav a {
+    display: inline-block;   
+    color: @primary;
+    text-shadow: @shadow;
+    width:10%;
+}
+
+nav a:hover {
+    color: @accent;
+    background: #27594b;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, @accent), color-stop(64%, @accent2), color-stop(99%, @primary), color-stop(100%, @primary));
+    background: -webkit-linear-gradient(top, @accent 0%, @accent2 64%, @primary 99%, @primary 100%);
+    background: linear-gradient(to bottom, @accent 0%, @accent2 64%, @primary 99%, @primary 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@accent', endColorstr='@primary', GradientType=0 );
+    -webkit-transition: all 1s ease-in-out 0s;
+    transition: all 1s ease-in-out 0s;
+    z-index: 50;
+}
+
+h1 {
+    margin-top: 175px;
+}
+h2 {
+    line-height: 1;
+}
+#menu {
+    display: none;
+}
+
+#topSocial {
+    display: inline;
+}
+.frame {
+    margin: 55px 0 0 3%;
+}
+
+#openHours {
+    margin: 55px 15% 0 auto;
+}
+
+#tagline {
+    float: right;
+    width: 40%;
+    margin: -100px 5% 0 0;
+}
+#tagline a {
+    display: none;
+}
+#openHours{
+    margin: 100px 1% 0 2%;
+}
+.contactForm {
+    width: 40%;
+}
+#filler {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top:500px;
+}
+.triangleF {
+    margin-right: -35%;
+}
+#schedule {
+    margin-top: 55px;
+}
+
+#map {
+    margin-top: 70px;
+    width: 100%;
+}
+#callIt {
+    margin-top: 55px;
+}
+
+#getIt {
+    margin-bottom: 25px;
+}
+
+.hide {
+    top: 90px;
+    -webkit-transition: none;
+    transition: none;
+}
+.active {
+    color: @accent;
+    background: #27594b;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, @accent), color-stop(64%, @accent2), color-stop(99%, @primary), color-stop(100%, @primary));
+    background: -webkit-linear-gradient(top, @accent 0%, @accent2 64%, @primary 99%, @primary 100%);
+    background: linear-gradient(to bottom, @accent 0%, @accent2 64%, @primary 99%, @primary 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@accent', endColorstr='@primary', GradientType=0 );
+}
+}
+@media only screen and (min-width: 900px) {
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+#filler {
+    top: 500px;
+    margin-right: 5%;
+}
+.triangle {
+    margin-left: -20%;
+    border-left: 550px solid @accent3;
+    border-bottom: 100px solid transparent;
+}
+
+.triangleR {
+    margin-right: -20%;
+    border-right: 550px solid @accent;
+    border-bottom: 100px solid transparent;
+} 
+
+.triangleF {
+    margin-right: -30%;
+    border-right: 550px solid @accent;
+    border-top: 100px solid transparent;
+}  
+}
+@media only screen and (min-width: 1025px) {
+#filler2 {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+}
+@media only screen and (min-width: 1100px) {
+#filler {
+    top: 450px;
+    margin-right: 10%;
+}
+}
+
+
