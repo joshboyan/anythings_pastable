@@ -26,6 +26,17 @@ $("img").unveil(200, function() {
   });
 });
 
+var wrap = $("#wrap");
+
+wrap.on("scroll", function(e) {
+    
+  if (this.scrollTop > 147) {
+    $("#navMenu").addClass("fixedNav");
+  } else {
+    $("#navMenu").removeClass("fixedNav");
+  }
+  
+});
 
 
 

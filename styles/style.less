@@ -266,6 +266,7 @@ not yet! The content property allows this.
 /* MOBILE STYLESHEET */
 
 body {
+    width: 100%;
     font: 16px/1.5 @font2;
     background: @primary;
 }
@@ -336,7 +337,7 @@ pre {
 }
 
 header {
-    position: fixed;
+    position: absolute;
     top:0;
     left: 0;
     width: 100%;
@@ -347,7 +348,7 @@ header {
 
 nav ul {
     top: 90px;
-    position: fixed;
+    position: relative;
     display: block;
     text-align: center;
     -webkit-transition: all 1s ease-in-out 0s;
@@ -467,7 +468,7 @@ footer a:hover {
     padding:10px;
     background: #fff;
     border: @border1;
-    box-shadow: 5px 5px 10px #000;
+    box-shadow: 5px 5px 10px #666;
     -webkit-transform: rotate(2deg);
         -ms-transform: rotate(2deg);
             transform: rotate(2deg);
@@ -484,7 +485,7 @@ footer a:hover {
   padding: 10px;
   background: #fff;
   border: @border1;
-  box-shadow: 5px 5px 10px #000;
+  box-shadow: 5px 5px 10px #666;
   -webkit-transform: rotate(358deg);
   -ms-transform: rotate(358deg);
   transform: rotate(358deg);
@@ -792,59 +793,13 @@ tr:first-child {
   margin-top: 0;
 }
 }
-/* TABLET CSS */
 
-@media only screen and (min-width: 481px) {
+/*Tablet CSS */
+
+@media only screen and (min-width: 750px) {
 form {
     margin: -80px 0 0 25%;
 }
-video {
-    width: 40%;
-    margin: 0 30%;
-}
-.frame {
-    text-align: center;
-    margin: 35px 0 0 20%;
-  }
-  .extras h3 {
-  margin-left: -25%;
-  }
-  .extras li {
-  margin-left: 20%;
-  }
-.push h3 {
-    margin-top: 100px;
-}
-.triangle {
-    border-left: 450px solid @accent3;
-    border-bottom: 100px solid transparent;
-}
-
-.triangleR {
-    border-right: 450px solid @accent;
-    border-bottom: 100px solid transparent;
-}
-
-.triangleF {
-    border-right: 450px solid @accent;
-    border-top: 100px solid transparent;
-}
-
-#openHours{
-    width: 45%;
-    padding-left: 5%;
-}
-
-.scripts {
-  width: 80%;
-  margin: 0 auto;
-}
-
-}
-
-/*Desktop CSS */
-
-@media only screen and (min-width: 750px) {
 video {
     width: 30%;
     margin: 0 35%;
@@ -864,6 +819,9 @@ video {
   margin: 0 auto 80px auto;
   padding: 35px 0;
 }
+.push h3 {
+    margin-top: 40px;
+}
 .pushup {
     padding-bottom: 35px;
   }  
@@ -872,6 +830,7 @@ video {
     .push {
   padding: 25px 0;
   }
+    
   .pushUp {
     margin: -200px auto 30px auto;
   }
@@ -895,9 +854,8 @@ header {
 
 nav ul {
     background: @accent;
-    position: fixed;
     display: inline;    
-    top: 90px; 
+    top: 0px; 
     left: 0;
     width: 100%;
     min-width: 700px;   
@@ -967,6 +925,7 @@ h2 {
 #openHours{
     margin: 100px 1% 0 2%;
 }
+
 .contactForm {
     width: 40%;
 }
@@ -996,7 +955,7 @@ h2 {
 }
 
 .hide {
-    top: 90px;
+    top: 0px;
     -webkit-transition: none;
     transition: none;
 }
@@ -1037,6 +996,9 @@ main {
 }  
 }
 @media only screen and (min-width: 1025px) {
+.push h3 {
+    margin-top: 100px;
+}
 #filler2 {
     width: 75%;
     margin: 0 auto;
