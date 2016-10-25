@@ -37,12 +37,12 @@
        <image:caption>Fried Ravioli</image:caption>
     </image:image>
     <image:image>
-       <image:loc>http://anythingspastablepdx.com/images/chipotle_chicken_mac.jpg</image:loc>
+       <image:loc>http://anythingspastablepdx.com/images/chorizo_chicken_mac.jpg</image:loc>
        <image:caption>Chorizo Chicken Mac</image:caption>
     </image:image>
     <image:image>
-       <image:loc>http://anythingspastablepdx.com/images/meatball_marinara.jpg</image:loc>
-       <image:caption>Meatball Marinara</image:caption>
+       <image:loc>http://anythingspastablepdx.com/images/meatball_marinara_rotini.jpg</image:loc>
+       <image:caption>Meatball Marinara Rotini</image:caption>
     </image:image>
   </url>
   <url> 
