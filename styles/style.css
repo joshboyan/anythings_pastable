@@ -390,6 +390,9 @@ header {
   background: url(../images/wood.png) repeat;
   z-index: 99;
 }
+#navMenu {
+  display: none;
+}
 nav ul {
   position: relative;
   display: block;
@@ -813,8 +816,14 @@ tr:first-child {
     font: 18px/2 'Roboto', sans-serif;
   }
   header {
-    position: fixed;
+    position: relative;
     height: 130px;
+  }
+  #mobileNav {
+    display: none;
+  }
+  #navMenu {
+    display: inline;
   }
   nav ul {
     background: linear-gradient(to bottom, #265749 90%, #BDCFDB 10%);
@@ -851,7 +860,7 @@ tr:first-child {
     z-index: 50;
   }
   h1 {
-    margin-top: 175px;
+    margin-top: 75px;
   }
   h2 {
     line-height: 1;

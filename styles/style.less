@@ -345,6 +345,9 @@ header {
     background: url(../images/wood.png) repeat;
     z-index: 99;
 }
+#navMenu {
+    display: none;
+}
 
 nav ul {
     position: relative;
@@ -849,10 +852,15 @@ body {
 }
 
 header { 
-    position: fixed;
+    position: relative;
     height: 130px;
 }
-
+#mobileNav {
+    display: none;
+}
+#navMenu {
+    display: inline;
+}
 nav ul {
     background: linear-gradient(to bottom, @accent 90%, @accent2 10%);
     display: inline; 
@@ -894,7 +902,7 @@ nav a:hover {
 }
 
 h1 {
-    margin-top: 175px;
+    margin-top: 75px;
 }
 h2 {
     line-height: 1;

@@ -40,7 +40,7 @@ Last update: 2016/03/16
 Standards: HTML5, CSS3, Schema.org, W3C
 
                             
-Components: LESS, jQuery, Open Status Plugin, BlueImp Plugin, Cycle2 Plugin, Unveil Plugin
+Components: LESS, jQuery, Open Status Plugin, BlueImp Plugin, Cycle2 Plugin, Unveil Plugin, npm
 
                             
 Software: SublimeText 2, GIMP, Inkscape
