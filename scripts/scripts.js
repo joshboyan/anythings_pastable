@@ -34,5 +34,5 @@ $("img").unveil(200, function() {
 
 //sticky menu at the top the top after scrolling 100px in desktop view 
 $(window).scroll(function() {
-    $("#navMenu").css("top", Math.max(-12, 100 - $(this).scrollTop()));
+    $("#navMenu").css("top", Math.max(-10, 100 - $(this).scrollTop()));
 });
