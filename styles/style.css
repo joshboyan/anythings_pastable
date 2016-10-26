@@ -688,6 +688,15 @@ tr:first-child {
 .social {
   margin: 35px auto 0 auto;
 }
+.social i {
+  font-size: 2rem;
+  padding-top: 8px;
+  color: #F1F5F7;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #BDCFDB;
+  border-radius: 2px;
+}
 .social li {
   display: inline;
   text-align: center;
@@ -696,9 +705,7 @@ tr:first-child {
   z-index: 99;
 }
 .socialIcons img {
-  border: 1px solid #BDCFDB;
   border-radius: 4px;
-  background: #BDCFDB;
 }
 #arrow {
   margin: 35px auto 0 auto;
