@@ -347,9 +347,9 @@ header {
 }
 
 nav ul {
-    top: 90px;
     position: relative;
     display: block;
+    top: -10px;
     text-align: center;
     -webkit-transition: all 1s ease-in-out 0s;
     transition: all 1s ease-in-out 0s;
@@ -736,7 +736,7 @@ tr:first-child {
 
 .active {
     color: @accent;
-     background: @accent;
+    background: @accent;
     background: -webkit-gradient(left top, right top, color-stop(0%, @accent), color-stop(20%, @accent2), color-stop(80%, @accent2), color-stop(100%, @accent));
     background: -webkit-linear-gradient(left, @accent 0%, @accent2 20%, @accent2 80%, @accent 100%);
     background: linear-gradient(to right, @accent 0%, @accent2 20%, @accent2 80%, @accent 100%);
@@ -849,12 +849,14 @@ body {
 }
 
 header { 
+    position: fixed;
     height: 130px;
 }
 
 nav ul {
-    background: @accent;
-    display: inline;    
+    background: linear-gradient(to bottom, @accent 90%, @accent2 10%);
+    display: inline; 
+    position: fixed;   
     top: 0px; 
     left: 0;
     width: 100%;
@@ -884,9 +886,7 @@ nav a {
 nav a:hover {
     color: @accent;
     background: #27594b;
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, @accent), color-stop(64%, @accent2), color-stop(99%, @primary), color-stop(100%, @primary));
-    background: -webkit-linear-gradient(top, @accent 0%, @accent2 64%, @primary 99%, @primary 100%);
-    background: linear-gradient(to bottom, @accent 0%, @accent2 64%, @primary 99%, @primary 100%);
+    background: linear-gradient(to bottom, @accent 0%, @accent2 64%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@accent', endColorstr='@primary', GradientType=0 );
     -webkit-transition: all 1s ease-in-out 0s;
     transition: all 1s ease-in-out 0s;
@@ -955,16 +955,14 @@ h2 {
 }
 
 .hide {
-    top: 0px;
+    top: 100px;
     -webkit-transition: none;
     transition: none;
 }
 .active {
     color: @accent;
     background: #27594b;
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, @accent), color-stop(64%, @accent2), color-stop(99%, @primary), color-stop(100%, @primary));
-    background: -webkit-linear-gradient(top, @accent 0%, @accent2 64%, @primary 99%, @primary 100%);
-    background: linear-gradient(to bottom, @accent 0%, @accent2 64%, @primary 99%, @primary 100%);
+    background: linear-gradient(to bottom, @accent 0%, @accent2 64%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@accent', endColorstr='@primary', GradientType=0 );
 }
 }

@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var path = require('path');
 var browserSync = require('browser-sync').create();
+var autoprefixer = require('gulp-autoprefixer');
  
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -20,6 +21,10 @@ gulp.task('less', function () {
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
+    .pipe(autoprefixer({
+            browsers: ['last 4 versions'],
+            cascade: false
+        }))
     .pipe(gulp.dest('./styles'))
     .pipe(browserSync.stream());
 });

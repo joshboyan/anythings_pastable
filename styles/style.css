@@ -391,11 +391,10 @@ header {
   z-index: 99;
 }
 nav ul {
-  top: 90px;
   position: relative;
   display: block;
+  top: -10px;
   text-align: center;
-  -webkit-transition: all 1s ease-in-out 0s;
   transition: all 1s ease-in-out 0s;
   z-index: 50;
 }
@@ -406,9 +405,6 @@ nav li {
   width: 40%;
   height: 45px;
   background: #265749;
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #265749), color-stop(80%, #265749), color-stop(100%, #BDCFDB));
-  background: -webkit-radial-gradient(center, ellipse cover, #265749 0%, #265749 80%, #BDCFDB 100%);
-  background: -webkit-radial-gradient(center ellipse, #265749 0%, #265749 80%, #BDCFDB 100%);
   background: radial-gradient(ellipse at center, #265749 0%, #265749 80%, #BDCFDB 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@accent', endColorstr='@accent2', GradientType=1);
   border-radius: 4px;
@@ -457,14 +453,9 @@ footer a:hover {
   border: 1px solid #BDCFDB;
   border-radius: 4px;
   background: #265749;
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #265749), color-stop(80%, #265749), color-stop(100%, #BDCFDB));
-  background: -webkit-radial-gradient(center, ellipse cover, #265749 0%, #265749 80%, #BDCFDB 100%);
-  background: -webkit-radial-gradient(center ellipse, #265749 0%, #265749 80%, #BDCFDB 100%);
   background: radial-gradient(ellipse at center, #265749 0%, #265749 80%, #BDCFDB 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@accent', endColorstr='@accent2', GradientType=1);
-  -webkit-transition: all 2s ease-in-out 0;
   transition: all 2s ease-in-out 0;
-  -webkit-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
 }
 #topSocial {
@@ -713,9 +704,6 @@ tr:first-child {
   line-height: 1;
   border-radius: 4px;
   background: #265749;
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #265749), color-stop(80%, #265749), color-stop(100%, #BDCFDB));
-  background: -webkit-radial-gradient(center, ellipse cover, #265749 0%, #265749 80%, #BDCFDB 100%);
-  background: -webkit-radial-gradient(center ellipse, #265749 0%, #265749 80%, #BDCFDB 100%);
   background: radial-gradient(ellipse at center, #265749 0%, #265749 80%, #BDCFDB 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@accent', endColorstr='@accent2', GradientType=1);
   position: relative;
@@ -729,7 +717,6 @@ tr:first-child {
   color: #265749;
   background: #265749;
   background: -webkit-gradient(left top, right top, color-stop(0%, #265749), color-stop(20%, #BDCFDB), color-stop(80%, #BDCFDB), color-stop(100%, #265749));
-  background: -webkit-linear-gradient(left, #265749 0%, #BDCFDB 20%, #BDCFDB 80%, #265749 100%);
   background: linear-gradient(to right, #265749 0%, #BDCFDB 20%, #BDCFDB 80%, #265749 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@accent', endColorstr='@accent2', GradientType=1);
 }
@@ -737,12 +724,10 @@ tr:first-child {
   -webkit-transform: rotatez(90deg);
   -ms-transform: rotate(90deg);
   transform: rotatez(90deg);
-  -webkit-transition: all 2s ease-in-out 0s;
   transition: all 2s ease-in-out 0s;
 }
 .hide {
   top: -400px;
-  -webkit-transition: all 1s ease-in-out 0s;
   transition: all 1s ease-in-out 0s;
   z-index: 1;
 }
@@ -828,16 +813,17 @@ tr:first-child {
     font: 18px/2 'Roboto', sans-serif;
   }
   header {
+    position: fixed;
     height: 130px;
   }
   nav ul {
-    background: #265749;
+    background: linear-gradient(to bottom, #265749 90%, #BDCFDB 10%);
     display: inline;
+    position: fixed;
     top: 0px;
     left: 0;
     width: 100%;
     min-width: 700px;
-    -webkit-transition: none;
     transition: none;
   }
   nav li {
@@ -859,11 +845,8 @@ tr:first-child {
   nav a:hover {
     color: #265749;
     background: #27594b;
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, #265749), color-stop(64%, #BDCFDB), color-stop(99%, #F1F5F7), color-stop(100%, #F1F5F7));
-    background: -webkit-linear-gradient(top, #265749 0%, #BDCFDB 64%, #F1F5F7 99%, #F1F5F7 100%);
-    background: linear-gradient(to bottom, #265749 0%, #BDCFDB 64%, #F1F5F7 99%, #F1F5F7 100%);
+    background: linear-gradient(to bottom, #265749 0%, #BDCFDB 64%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@accent', endColorstr='@primary', GradientType=0);
-    -webkit-transition: all 1s ease-in-out 0s;
     transition: all 1s ease-in-out 0s;
     z-index: 50;
   }
@@ -922,16 +905,13 @@ tr:first-child {
     margin-bottom: 25px;
   }
   .hide {
-    top: 0px;
-    -webkit-transition: none;
+    top: 100px;
     transition: none;
   }
   .active {
     color: #265749;
     background: #27594b;
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, #265749), color-stop(64%, #BDCFDB), color-stop(99%, #F1F5F7), color-stop(100%, #F1F5F7));
-    background: -webkit-linear-gradient(top, #265749 0%, #BDCFDB 64%, #F1F5F7 99%, #F1F5F7 100%);
-    background: linear-gradient(to bottom, #265749 0%, #BDCFDB 64%, #F1F5F7 99%, #F1F5F7 100%);
+    background: linear-gradient(to bottom, #265749 0%, #BDCFDB 64%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@accent', endColorstr='@primary', GradientType=0);
   }
 }

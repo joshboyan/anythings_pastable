@@ -1,7 +1,8 @@
 $(document).ready(function() {
-	$('figure').removeClass('jsOff')
+    //Backup styles for browsers with JavaScript disabled
+	$('figure').removeClass('jsOff');
     $('img').removeClass('jsOff');
-	onClick();
+    //Load hours of operation for the day into index.html
 	$('#ops-trigger').openStatus({
         sunday : ' 2:30pm until 9',
         monday : 'again Tuesday at 5pm',
@@ -13,31 +14,30 @@ $(document).ready(function() {
     });
 });
 
-function onClick () {
+//Mobile nav trigger
+
 	$('#menu').on('click', function(){
-		$('#navMenu').toggleClass('hide')
+		$('#navMenu').toggleClass('hide');
         $('#menu').toggleClass('spin');
 	});
-}
 
+
+//Lazy load imgs 200 px before entering the viewport
 $("img").unveil(200, function() {
   $(this).load(function() {
+    //Exposure effect fading polaroid imgs in
     this.style.opacity = 1;
   });
 });
 
-var wrap = $("#wrap");
 
-wrap.on("scroll", function(e) {
-    
-  if (this.scrollTop > 147) {
-    $("#navMenu").addClass("fixedNav");
-  } else {
-    $("#navMenu").removeClass("fixedNav");
-  }
-  
-});
-
+/*var mq = window.watchMedia("(min-width: 780px)");
+if (mq.matches) {
+//sticky menu at the top the top after scrolling 100px in desktop view 
+    $(window).scroll(function(){
+        $("#navMenu").css("top",Math.max(-12,100-$(this).scrollTop()));
+    }) 
+}*/
 
 
 
