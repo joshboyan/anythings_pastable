@@ -672,6 +672,9 @@ tr:first-child {
   position: relative;
   z-index: 90;
 }
+#mobilePhone {
+  width: 100%;
+}
 #desktopPhone {
   display: none;
 }
@@ -699,7 +702,7 @@ tr:first-child {
   text-align: center;
   margin: 35px auto 0 auto;
   position: relative;
-  z-index: 99;
+  z-index: 0;
 }
 .socialIcons img {
   border-radius: 4px;
