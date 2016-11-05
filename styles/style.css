@@ -381,6 +381,9 @@ pre {
   font-family: "Courier New", monospace;
   white-space: pre-wrap;
 }
+main {
+  margin-bottom: 2rem;
+}
 header {
   position: absolute;
   top: 0;
@@ -950,6 +953,7 @@ tr:first-child {
   }
   #desktopPhone {
     display: block;
+    float: right;
   }
   #mobilePhone {
     display: none;
