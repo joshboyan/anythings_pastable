@@ -421,16 +421,7 @@ footer a:hover {
 #menu {
     position: absolute;
     right: 10%; 
-    top: 25%;
-    width: 45px;
-    border: @border1;
-    border-radius: @radius;
-    background: @accent;
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, @accent), color-stop(80%, @accent), color-stop(100%, @accent2));
-    background: -webkit-radial-gradient(center, ellipse cover, @accent 0%, @accent 80%, @accent2 100%);
-    background: -webkit-radial-gradient(center ellipse, @accent 0%, @accent 80%, @accent2 100%);
-    background: radial-gradient(ellipse at center, @accent 0%, @accent 80%, @accent2 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@accent', endColorstr='@accent2', GradientType=1 );
+    top: 15%;
     -webkit-transition: all 2s ease-in-out 0;
     transition: all 2s ease-in-out 0;
     -webkit-transition: all .5s ease-in-out 0s;
@@ -692,6 +683,9 @@ tr:first-child {
     z-index: 90;
 }
 
+#desktopPhone {
+    display: none;
+}
 #emailUs {
     margin: @margin;
 }
@@ -726,17 +720,7 @@ tr:first-child {
     
 }
 #arrow { 
-    margin: @margin;
-    width: 45px;
-    border: @border1;
-    line-height: 1;
-    border-radius: @radius;
-    background: @accent;
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, @accent), color-stop(80%, @accent), color-stop(100%, @accent2));
-    background: -webkit-radial-gradient(center, ellipse cover, @accent 0%, @accent 80%, @accent2 100%);
-    background: -webkit-radial-gradient(center ellipse, @accent 0%, @accent 80%, @accent2 100%);
-    background: radial-gradient(ellipse at center, @accent 0%, @accent 80%, @accent2 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@accent', endColorstr='@accent2', GradientType=1 );
+    margin: @margin;  
     position: relative;
     z-index: 99;
 }
@@ -1008,7 +992,13 @@ main {
     margin-right: -30%;
     border-right: 550px solid @accent;
     border-top: 100px solid transparent;
-}  
+} 
+#desktopPhone {
+    display: block;
+} 
+#mobilePhone {
+    display: none;
+}
 }
 @media only screen and (min-width: 1025px) {
 .push h3 {

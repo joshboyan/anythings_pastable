@@ -451,13 +451,7 @@ footer a:hover {
 #menu {
   position: absolute;
   right: 10%;
-  top: 25%;
-  width: 45px;
-  border: 1px solid #BDCFDB;
-  border-radius: 4px;
-  background: #265749;
-  background: radial-gradient(ellipse at center, #265749 0%, #265749 80%, #BDCFDB 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@accent', endColorstr='@accent2', GradientType=1);
+  top: 15%;
   transition: all 2s ease-in-out 0;
   transition: all 0.5s ease-in-out 0s;
 }
@@ -678,6 +672,9 @@ tr:first-child {
   position: relative;
   z-index: 90;
 }
+#desktopPhone {
+  display: none;
+}
 #emailUs {
   margin: 35px auto 0 auto;
 }
@@ -709,13 +706,6 @@ tr:first-child {
 }
 #arrow {
   margin: 35px auto 0 auto;
-  width: 45px;
-  border: 1px solid #BDCFDB;
-  line-height: 1;
-  border-radius: 4px;
-  background: #265749;
-  background: radial-gradient(ellipse at center, #265749 0%, #265749 80%, #BDCFDB 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@accent', endColorstr='@accent2', GradientType=1);
   position: relative;
   z-index: 99;
 }
@@ -954,6 +944,12 @@ tr:first-child {
     margin-right: -30%;
     border-right: 550px solid #265749;
     border-top: 100px solid transparent;
+  }
+  #desktopPhone {
+    display: block;
+  }
+  #mobilePhone {
+    display: none;
   }
 }
 @media only screen and (min-width: 1025px) {
