@@ -437,6 +437,9 @@ footer a:hover {
     top: -20px;
     display: none;
 }
+.frameContainer {
+    margin-top: 4rem;
+}
 .frame {
     display: block;
     margin: 0 5%;
@@ -795,6 +798,18 @@ tr:first-child {
 }
 }
 
+@media only screen and (min-width: 400px) {
+    .frameContainer {
+    margin-left: 10%;
+}
+}
+
+@media only screen and (min-width: 630px) {
+    .frameContainer {
+    margin-left: 20%;
+}
+}
+
 /*Tablet CSS */
 
 @media only screen and (min-width: 750px) {
@@ -804,10 +819,6 @@ form {
 video {
     width: 30%;
     margin: 0 35%;
-}
-
-.frameContainer {
-    margin-left: 0;
 }
 
 #openHours {
@@ -835,6 +846,10 @@ video {
   .pushUp {
     margin: -200px auto 30px auto;
   }
+  .frameContainer {
+    margin-top: 0;
+    margin-left: 0;
+}
     .frame {
     margin-left: 0;
   }
@@ -842,6 +857,9 @@ video {
     display: block;
     border: @border1;
     border-top: none;
+}
+footer .span4:nth-of-type(2) div {
+    margin-top: 2rem;
 }
 }
 @media only screen and (min-width: 780px) {
