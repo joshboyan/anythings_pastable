@@ -1,0 +1,3 @@
+The site is a mobile-first, responsive design built using LESS for styling and Jquery for added functionality. I used photoshop to create inlaid wood-burned effet for the header and footer. The site features a Google map, Facebook and Twitter feed integration as well as a touch repsonsive photo gallery. In addition to designing and developing the site I wrote all of the copy.
+
+[View Site](http://joshboyan.com/anythings-pastable/buzz.html)
