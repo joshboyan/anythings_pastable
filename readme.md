@@ -12,4 +12,4 @@ Features of the site include:
 - Photo slideshow on the homepage
 - Sticky navigation after the header scrolls out of view to improve UX.
 
-[View Site](http://joshboyan.com/anythings-pastable/buzz.html)
+[View Site](http://joshboyan.github.io/anythings_pastable/)
